@@ -9,4 +9,11 @@ module ApplicationHelper
             "#{base_title} | #{page_title}"
         end
     end
+
+    #Returns the current page.
+    def active_if(options)
+        if params.merge(options) == params
+            'active'
+        end
+    end
 end
